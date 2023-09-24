@@ -1,0 +1,64 @@
+body{
+  background-image: linear-gradient(rgba(34, 64, 68, 0.5),rgba(23, 42, 52, 0.5)),url(images/nice.jpg);
+  background-position:center;
+  background-size: cover;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.contents{
+  color: #fff;
+  margin-left: 50px;
+}
+
+.contents h1{
+  font-size: 100px;
+  max-width: 1000px;
+  font-weight: 100;
+
+}
+
+.contents h2{
+  font-size: 75px;
+  max-width: 1000px;
+  font-weight: 100;
+  margin-top: 100px;
+
+}
+
+.contents p{
+  max-width: 850px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  max-width: 950px;
+  border-style: groove;
+  border-color: #6460606b;
+  padding: 20px;
+ }
+
+.slide-left{
+  animation: slideleft 1.5s linear forwards;
+}
+
+.projects{
+  
+}
+
+@keyframes hover-animation {
+  0% {color: rgba(50, 180, 120, 0.2);}
+  25% {color: rgba(50, 180, 120, 0.4);}
+  50% {color: rgb(50, 180, 120,0.6);}
+  75% {color: rgb(50, 180, 120,0.8);}
+  100% {color: rgb(50, 180, 120,1);}
+}
+
+@keyframes slideleft {
+  0%{
+    transform: translate(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0);
+    opacity: 1;
+  }
+}
