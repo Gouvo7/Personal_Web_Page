@@ -30,14 +30,14 @@
     
     <body>
         <div class="contents">
-            <h1 class="slide-left">Passion for creation</h1>
-            <p class="slide-left">Hello everyone! My name is Nektarios Gkouvousis, I am 22 years old
+            <h1 class="fade_in">Passion for creation</h1>
+            <p class="fade_in">Hello everyone! My name is Nektarios Gkouvousis, I am 22 years old
             and I am currently studying Informatics and Computer Engineering at
             the University of West Attica in Athens Greece. This is my personal
             web page, and you can use it to more about me, my personal projects and 
             my concat information. Have fun exploring around!</p>
-            <h1 class="slide-left">About me</h1>
-            <p class="slide-left">I live in Piraeus Greece and I am an undergraduate student.
+            <h1 class="fade_in">About me</h1>
+            <p class="fade_in">I live in Piraeus Greece and I am an undergraduate student.
                 Alongside with my studies, I currently work for a small company as a junior
                 in the backend technologies used to power a CRM (C# and MySQL).
             </p>

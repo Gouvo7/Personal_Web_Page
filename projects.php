@@ -32,12 +32,13 @@ $db = connectDB();
     </head>
     <body class="test">
         <div class="contents">
-            <h1 class="slide-left">My personal projects</h1>
+            <h1 class="fade_in">My personal projects</h1>
             <br><br>
-            <p>Throughout my career, I have designed and built applications
+            <p class="fade_in">Throughout my adventure of learing software development, I have designed and built applications
                 of all sorts of kind. Below, you can find some of my most recent and 
             worth looking projects.</p>
         </div>
+        <br><br>
         <div class="projects">
             <?php 
                 $query = "SELECT * FROM projs";
@@ -49,14 +50,27 @@ $db = connectDB();
                     $projName = $project['proj_Title'];
                     $projDesc = $project['proj_Desc'];
                     $projLink = $project['proj_Link'];
+                    $projImg = $project['proj_template'];
             ?>
-            <a href="project.php?project=<?php echo $projName; ?>">
-                <div class="item">
-                    <h3><?php echo $projName;?></h3>
+            
+            <div class="item">
+                <div class="fade_in">
+                    <a href="project.php?project=<?php echo $projName; ?>">
+                    <div class="image-container">
+                        <h3>●  <?php echo $projName;?>  ●</h3>
+                            <img src="images\<?php echo $projImg ?>">
+                    </div>
+                    </a>
+                    <br>
+                    <div class="contents">
+                        <p class="fade_in"><?php echo $projDesc;?></p>
+                    </div>
                 </div>
-            </a>
+            </div>
             <?php
             }
-        ?>
+            ?>
+        </div>
+        
     </body>
 </html>
