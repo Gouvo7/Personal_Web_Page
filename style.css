@@ -1,5 +1,5 @@
 body{
-  background-image: linear-gradient(rgba(34, 64, 68, 0.5),rgba(23, 42, 52, 0.5)),url(images/nice.jpg);
+  background-image: linear-gradient(rgba(245, 127, 127, 0.082),rgb(0, 0, 0)),url(images/nice.jpg);
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat; /* Prevent background from repeating */
@@ -7,43 +7,69 @@ body{
 }
 
 .contents{
-  color: #fff;
+  color: #d0ff00bd;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contents h1{
-  font-size: 100px;
+  font-size: 10px;
   max-width: 1000px;
   font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0 auto;
   margin-bottom: 2%;
   margin-top: 3%;
 }
 
 .contents h2{
-  font-size: 85x;
+  font-size: 45x;
   max-width: 1000px;
   font-weight: 100;
   margin-top: 100px;
   margin: 0 auto;
 }
 
-.contents p{
-  max-width: 850px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 35px;
+.contents p1{
+  font-size: 60px;
+  font-family: 'Montserrat';
   text-align: center;
-  max-width: 950px;
-  border-style:inherit;
+  align-items: center;
   border-color: #6460606b;
-  padding: 20px;
-  margin: 0 auto;
+  text-wrap: wrap;
+  margin-top: 10%;
+  background-color: rgba(11, 11, 11, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.contents p1{
+  font-size: 60px;
+  font-family: 'Montserrat';
+  text-align: center;
+  align-items: center;
+  border-color: #6460606b;
+  text-wrap: wrap;
+  margin-top: 10%;
+  background-color: rgba(11, 11, 11, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.contents p{
+  font-size: 25px;
+  margin-top: 5%;
+  text-align: center;
+  max-width: 80%;
+  border-color: #6460606b;
+  text-align: left;
   background-color: rgba(11, 11, 11, 0.2); /* Increased alpha value (less transparent) */
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
-.id{
-  
+.contents a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.404);
 }
 
 .fade_in{
@@ -87,6 +113,28 @@ body{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(50, 180, 120,1);
+}
+
+.social{
+  position: fixed;
+  top: 50%;
+  left: 0; /* Align to the left side */
+  transform: translateY(-50%);
+}
+
+.social img{
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  margin-left: 20px;
+  justify-content: center; /* Center the navigation bar items horizontally */
+  display:block;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social img:hover{
+  transform: translateX(10px); /* Move the icon to the right to make space for text */
 }
 
 @keyframes hover-animation {
