@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<header>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My personal website"/>
@@ -12,40 +12,74 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="navigation.js" defer></script>
     <script src="style.js"></script>
+    <script src="script.js"></script>
+
     <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social.css">
         
-    <div class="topnav">
-        <div class="logo">
+    <div class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">
             <img src="images/logo2.png">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <ul class="links" >
+            <li><a href="#about" onclick="scrollToSection('about')">Home</a></li>
+            <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
     </div>
-</head>
-    
+</header>
     <body>
-        <section class="top-section">
-            <div class="contents">
-                <p1 class="fade_in">
-                    Hey there! I am Nektarios and I am a Software Engineer<br>that loves to create and innovate.
-                </p1>
-            </div>
+        <div class="welcome_box">
+            <h2>I am Nektarios and I am a Full Stack Software Engineer.</h2>
+        </div>
+        <br><br><br>
+        <div class="get_started" id="get_started">
+            <p>Get Started</p>
+            <img src="images/transparent_enter.png">
+        </div>
 
-            <div class="contents">
-                <p class="fade_in">
-                    I live in Athens Greece and I am currently studying Informatics and Computer Engineering at
-                    the University of West Attica in Athens.
-                    Alongside with my studies, I currently work for <a href="https://www.datablue.gr/">DataBlue S.A</a>
-                    as a Junior Developer. In my role as a Junior C# .NET developer, I'm deeply involved in the maintenance of an API and the development of features for a desktop application used by doctors to help enhance job experience. I'm excited to be a part of a team that is making a significant impact on the healthcare industry by leveraging technology to improve healthcare management.
+        <section id="about">
+            <div class="section_title">
+                <h1>About Me</h1>
+            </div>
+            <div class="parbox">
+                <p>
+                    I am located in Athens Greece and I am currently studying Informatics and Computer Engineering at
+                    the University of West Attica in Athens. Alongside with my studies, I currently work for <a href="https://www.datablue.gr/">DataBlue S.A</a>
+                    as a Junior Fullstack .NET Developer. In my role as a developer, I'm deeply involved in the maintenance of an API and the development of features for a desktop application used by doctors to help enhance job experience. I'm excited to be a part of a team that is making a significant impact on the healthcare industry by leveraging technology to improve healthcare management
+                    from a doctor's perspective. <br><br>In my free time, I enjoy working on personal projects and learning new technologies. I am passionate about software development and I am always looking for new opportunities to grow and expand my knowledge.
+                    But, whenever I don't feel like coding, I enjoy playing video games, watching movies and TV series, and spending time with my friends and family.
+
                 </p>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="section_title">
+                <h1>Projects</h1>
+            </div>
+            <div class="parbox">
+                <p>
+                    Throughout my journey as a developer, I have worked on a variety of projects that have helped me gain the experience and knowledge needed to become a successful developer. Some of the projects I have worked on include:
+                </p>
+                <br>
+                <p>
+                    You can find more about my projects at my personal Github page.
+                </p>
+            </div>
+            <div class="container">
+                <h1>yapa<br><br><br>
+                    yapa</h1>
+            </div>
+        </section>
+        <div class="container">
+            <h2>THIS IS<BR> A TEST <BR> CONTAINER<BR> FOR NO <BR> REASON</h2>
+        </div>
+        <section id="contact">
+            <div class="container">
+                <h1>asds<br><br><br>
+                    sadsaa</h1>
             </div>
         </section>
     </body>
@@ -60,4 +94,5 @@
             <img src="images/linkedin_ico.png">
         </a>
     </div>
+
 </html>

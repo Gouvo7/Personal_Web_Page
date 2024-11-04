@@ -1,0 +1,7 @@
+
+<p class="fade_in">
+                I live in Athens Greece and I am currently studying Informatics and Computer Engineering at
+                the University of West Attica in Athens.
+                Alongside with my studies, I currently work for <a href="https://www.datablue.gr/">DataBlue S.A</a>
+                as a Junior Developer. In my role as a Junior C# .NET developer, I'm deeply involved in the maintenance of an API and the development of features for a desktop application used by doctors to help enhance job experience. I'm excited to be a part of a team that is making a significant impact on the healthcare industry by leveraging technology to improve healthcare management.
+            </p>

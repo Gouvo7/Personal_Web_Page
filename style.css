@@ -1,64 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body{
-  background-image: linear-gradient(rgba(245, 127, 127, 0.082),rgb(0, 0, 0)),url(images/nice.jpg);
+  background-color: rgb(189, 184, 184);
+  /*background-image: linear-gradient(rgba(245, 127, 127, 0.082),rgb(0, 0, 0)),url(images/nice.jpg);
   background-position:center;
   background-size: cover;
-  background-repeat: no-repeat; /* Prevent background from repeating */
-  background-attachment: fixed; /* Make the background static */
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
 }
 
-.contents{
-  color: #d0ff00bd;
+.welcome_box{
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 20px;
+  margin: 160px auto; /* Add margin-top to account for the navbar height */
+  box-shadow: rgb(255, 255, 255) 0px 6px 30px;
+  max-width: 690px;
+}
+
+.welcome_box h2{
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.get_started {
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text */
+  font-size: 1.5rem;
+  font-weight:bolder;
+}
+
+.get_started img{
+  height: 100px;
+  width: 100px;
+  transition: 300ms;
+}
+
+.get_started img:hover{
+  transform: scale(1.2); /* Move the icon to the right and scale it up by 20% */; /* Move the icon to the right to make space for text */
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.parbox{
+  color: white;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
 }
 
-.contents h1{
-  font-size: 10px;
-  max-width: 1000px;
-  font-weight: 100;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0 auto;
-  margin-bottom: 2%;
-  margin-top: 3%;
-}
-
-.contents h2{
-  font-size: 45x;
-  max-width: 1000px;
-  font-weight: 100;
-  margin-top: 100px;
-  margin: 0 auto;
-}
-
-.contents p1{
-  font-size: 60px;
-  font-family: 'Montserrat';
-  text-align: center;
-  align-items: center;
-  border-color: #6460606b;
-  text-wrap: wrap;
-  margin-top: 10%;
-  background-color: rgba(11, 11, 11, 0.2);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-}
-
-.contents p1{
-  font-size: 60px;
-  font-family: 'Montserrat';
-  text-align: center;
-  align-items: center;
-  border-color: #6460606b;
-  text-wrap: wrap;
-  margin-top: 10%;
-  background-color: rgba(11, 11, 11, 0.2);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-}
-
-.contents p{
+.parbox p{
   font-size: 25px;
   margin-top: 5%;
+  padding: 10px 10px 10px 10px;
+  text-wrap: wrap;
   text-align: center;
   max-width: 80%;
   border-color: #6460606b;
@@ -67,42 +76,83 @@ body{
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
-.contents a{
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.404);
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.section_title h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0 20px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.section_title::before,
+.section_title::after {
+  content: "";
+  flex: 1;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.section_title::before {
+  margin-right: 20px;
+}
+
+.section_title::after {
+  margin-left: 20px;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 100px auto; 
+  box-shadow: rgba(185, 111, 14, 0.5) 10px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; /* Add a subtle shadow */
+  transition: height 0.8s ease; /* Smooth transition for height changes */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  max-width: 800px;
+}
+
+.container h1{
+  font-size: 70px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.container h2{
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+}
+
+ul{
+  text-align: center;
+  align-items: center;
 }
 
 .fade_in{
   animation: fadein 1.5s linear forwards;
-  text-align: center;
-}
-
-.projects a{
-  color:white;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-}
-
-.item h3{
-  font-size: 50px;
-  text-align: center;
-}
-
-.item img{
-  max-width: 800px;
-  max-height: 700px;
-  margin: 0 auto;
-  display: block;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #ffffff;
+
 }
 
 /* Handle */
@@ -134,7 +184,7 @@ body{
 }
 
 .social img:hover{
-  transform: translateX(10px); /* Move the icon to the right to make space for text */
+  transform: translateX(20px) scale(1.3); /* Move the icon to the right and scale it up by 20% */; /* Move the icon to the right to make space for text */
 }
 
 @keyframes hover-animation {
@@ -154,4 +204,51 @@ body{
     transform: translate(0);
     opacity: 1;
   }
+}
+
+.typing-text {
+  font-size: 1.5rem;
+  color: #ffffff;
+  white-space: pre-wrap; /* Allows handling of line breaks */
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #ffffff; }
+}
+
+.typing-text.active::after {
+  content: '';
+  border-right: 2px solid #ffffff;
+  animation: blink 0.75s step-end infinite;
+}
+
+/* CSS code for an old-school video game text cloud */
+.text-cloud {
+  position: relative;
+  background: #ac2020;
+  border: 4px solid #000000;
+  border-radius: 4px;
+  padding: 10px;
+  width: max-content;
+  font-size: 16px;
+  color: #000000;
+}
+
+.text-cloud::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0;
+  border-color: #ffffff transparent;
+  display: block;
+  z-index: 1;
+}
+
+.text-cloud {
+  image-rendering: pixelated;
 }
