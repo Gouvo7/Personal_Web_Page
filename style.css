@@ -69,7 +69,8 @@ body {
 
 .parbox p {
   font-size: 25px;
-  margin-top: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   padding: 10px 10px 10px 10px;
   text-wrap: wrap;
   text-align: center;
@@ -218,6 +219,47 @@ body {
 }
 .progress-line .c::after {
   content: "70%";
+}
+
+.carousel-item img {
+  max-width: 1000px;
+  max-height: 600px; /* Set a fixed height */
+  object-fit: cover; /* Ensure images are scaled proportionally */
+  margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.carousel-control-prev {
+  left: 10%;
+}
+
+.carousel-control-next {
+  right: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  position: static;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 /* ////........Media Query........//// */
