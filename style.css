@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -12,17 +13,31 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
   height: 100vh;
-  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+.hello_box {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 20px;
+  margin: 160px auto 20px auto; /* Add margin-top to account for the navbar height */
+  max-width: 300px;
+}
+
+.hello_box h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
 }
 
 .welcome_box {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
   border-radius: 20px;
-  margin: 160px auto; /* Add margin-top to account for the navbar height */
+  margin: 0px auto 20px auto; /* Add margin-top to account for the navbar height */
   max-width: 700px;
 }
 
@@ -230,7 +245,9 @@ body {
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: auto;
+  width: 30px;
+  height: 30px;
+  margin-top: 20%;
 }
 
 .carousel-control-prev {
@@ -244,8 +261,9 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 50%;
+  padding: 10px 10px;
+  width: 30px;
+  border-radius: 20%;
 }
 
 .carousel-caption {
@@ -350,9 +368,33 @@ ul {
   animation: fadein 1.5s linear forwards;
 }
 
+/* Region Contact */
+
+.contact-box {
+  max-width: 800px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  left: 50%;
+}
+
+.google-map {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-box ul {
+  display: flex;
+  margin: 0px 20px;
+  flex-direction: column;
+}
+/* End Region Contact */
+
 /* Region Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -360,11 +402,11 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(50, 180, 120, 0.7);
+  background: rgba(106, 50, 180, 0.7);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(50, 180, 120, 1);
+  background: rgb(106, 50, 180, 1);
 }
 
 /* End Region Scrollbar */
@@ -392,56 +434,19 @@ ul {
   transform: translateX(20px) scale(1.3); /* Move the icon to the right and scale it up by 20% */ /* Move the icon to the right to make space for text */
 }
 
-@keyframes hover-animation {
-  0% {
-    color: rgba(50, 180, 120, 0.2);
-  }
-  25% {
-    color: rgba(50, 180, 120, 0.4);
-  }
-  50% {
-    color: rgb(50, 180, 120, 0.6);
-  }
-  75% {
-    color: rgb(50, 180, 120, 0.8);
-  }
-  100% {
-    color: rgb(50, 180, 120, 1);
-  }
-}
-/* End Region Social */
-
-/* Region Typing Text */
-@keyframes fadein {
-  0% {
-    transform: translate(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
+.hidden_left {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-100%);
 }
 
-.typing-text {
-  font-size: 1.5rem;
-  color: #ffffff;
-  white-space: pre-wrap; /* Allows handling of line breaks */
+.hidden_right {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(+100%);
 }
 
-@keyframes blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #ffffff;
-  }
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }
-
-.typing-text.active::after {
-  content: "";
-  border-right: 2px solid #ffffff;
-  animation: blink 0.75s step-end infinite;
-}
-/* End Region Typing Text */
