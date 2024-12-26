@@ -48,6 +48,21 @@ body {
   padding: 10px;
 }
 
+.message_box {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 20px;
+  margin: 30px auto 20px auto; /* Add margin-top to account for the navbar height */
+  max-width: 380px;
+}
+
+.message_box h3 {
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+}
+
 .get_started {
   display: flex; /* Use Flexbox for centering */
   flex-direction: column; /* Align items vertically */
@@ -117,6 +132,11 @@ body {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+.skills h3 {
+  color: black;
+  margin-top: 20px;
+}
+
 .skills-bar {
   padding: 25px 30px;
 }
@@ -128,6 +148,7 @@ body {
 .skills-bar .bar .info span {
   font-size: 1rem;
   font-weight: 500;
+  margin-right: 100%;
 }
 
 .skills-bar .bar .info {
@@ -164,25 +185,41 @@ body {
 }
 
 .progress-line .java {
-  width: 70%;
+  width: 80%;
 }
 .progress-line .csharp {
-  width: 70%;
+  width: 80%;
 }
 .progress-line .python {
-  width: 70%;
+  width: 80%;
 }
 .progress-line .html {
-  width: 70%;
+  width: 80%;
 }
 .progress-line .css {
-  width: 70%;
-}
-.progress-line .bootstrap {
-  width: 70%;
+  width: 60%;
 }
 .progress-line .javascript {
-  width: 70%;
+  width: 60%;
+}
+
+.progress-line .java::after {
+  content: "80%";
+}
+.progress-line .csharp::after {
+  content: "80%";
+}
+.progress-line .python::after {
+  content: "80%";
+}
+.progress-line .html::after {
+  content: "80%";
+}
+.progress-line .css::after {
+  content: "60%";
+}
+.progress-line .javascript::after {
+  content: "60%";
 }
 
 .bar .progress-line span::before {
@@ -204,41 +241,16 @@ body {
   right: 0;
   top: -28px;
   color: #f0f0f0;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   background: #07374a;
   padding: 1px 8px;
   border-radius: 3px;
 }
 
-.progress-line .java::after {
-  content: "70%";
-}
-.progress-line .csharp::after {
-  content: "70%";
-}
-.progress-line .python::after {
-  content: "70%";
-}
-.progress-line .html::after {
-  content: "70%";
-}
-.progress-line .css::after {
-  content: "70%";
-}
-.progress-line .bootstrap::after {
-  content: "70%";
-}
-.progress-line .javascript::after {
-  content: "70%";
-}
-.progress-line .c::after {
-  content: "70%";
-}
-
 .carousel-item img {
-  max-width: 1000px;
-  max-height: 600px; /* Set a fixed height */
+  max-width: 100%;
+  max-height: auto; /* Set a fixed height */
   object-fit: cover; /* Ensure images are scaled proportionally */
   margin: 0 auto;
 }
