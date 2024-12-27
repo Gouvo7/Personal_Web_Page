@@ -77,7 +77,6 @@ body {
 .get_started img {
   height: 100px;
   width: 100px;
-  transition: 300ms;
 }
 
 .get_started img:hover {
@@ -252,7 +251,7 @@ body {
   max-width: 100%;
   max-height: auto; /* Set a fixed height */
   object-fit: cover; /* Ensure images are scaled proportionally */
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .carousel-control-prev,
@@ -263,11 +262,11 @@ body {
 }
 
 .carousel-control-prev {
-  left: 10%;
+  left: 15%;
 }
 
 .carousel-control-next {
-  right: 10%;
+  right: 15%;
 }
 
 .carousel-control-prev-icon,
@@ -449,13 +448,13 @@ ul {
 .hidden_left {
   opacity: 0;
   transition: all 1s;
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .hidden_right {
   opacity: 0;
   transition: all 1s;
-  transform: translateX(+100%);
+  transform: translateX(+50%);
 }
 
 .show {
