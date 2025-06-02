@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="My personal website" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
     <meta name="author" content="Nektarios Gkouvousis" />
     <title>Nektarios Gkouvousis</title>
     <link
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="loading.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="social.css" />
     <link rel="icon" type="image/x-icon" href="images/logo2.ico" />
   </head>
   <body>
@@ -52,9 +51,10 @@
     <div class="welcome_box hidden_left" style="transition-delay: 1s;">
       <h2>I am Nektarios and I am a Full Stack Software Engineer.</h2>
     </div>
-    <br/><br/>
-    <div class="message_box hidden_right" style="transition-delay: 2s;"><h3>I love building things and designing User Interfaces.</h3></div>
-    <br/>
+    <div class="message_box hidden_right" style="transition-delay: 2s;">
+      <h3>I love building things and designing user interfaces.</h3>
+    </div>
+    <br>
     <div class="get_started hidden_left" style="transition-delay: 3s;" id="get_started">
       <p>Get Started</p>
       <img src="images/transparent_enter.png" />
@@ -73,44 +73,47 @@
           designed to support doctors and enhance their day-to-day workflow. I’m proud to be part of a team that is
           making a meaningful impact on the healthcare industry by using technology to improve medical professionals'
           experiences.
-          <br /><br /> In my free time, I enjoy building personal projects and exploring new technologies. I’m passionate 
+          <br><br> In my free time, I enjoy building personal projects and exploring new technologies. I’m passionate 
           about software development and always eager to grow my skill set and take on new challenges. When I’m not coding, 
           I like to relax by playing video games, watching movies and TV series, or spending quality time with friends and family.
         </p>
-        <br/>
+        <br>
       </div>
       <div class="parbox">
         <p>
           Throughout my journey of learning and building projects, I’ve explored a wide range of technologies and software stacks. 
-          Below are some of the tools and frameworks I actively use—but for me, learning is a continuous process, and I’m always 
+          Below are some of the software stacks I actively use, but for me learning is a continuous process, and I’m always 
           striving to expand my skill set.
         </p>
       </div>
-      <br /><br />
+      <br><br>
       <div class="parbox">
         <div class="skills">
           <h3>Software Stacks</h3>
           <div class="skills-bar">
             <div class="bar">
               <div class="info">
-              <span>C#</span>
+                <span>C#</span>
               </div>
               <div class="progress-line">
-              <span class="csharp"></span>
+                <span class="csharp"></span>
+              </div>
             </div>
             <div class="bar">
               <div class="info">
-              <span>Java</span>
+                <span>Java</span>
               </div>
               <div class="progress-line">
-              <span class="java"></span>
+                <span class="java"></span>
+              </div>
             </div>
             <div class="bar">
               <div class="info">
-              <span>Python</span>
+                <span>Python</span>
               </div>
               <div class="progress-line">
-              <span class="python"></span>
+                <span class="python"></span>
+              </div>
             </div>
             <div class="bar">
               <div class="info">
@@ -119,6 +122,7 @@
               <div class="progress-line">
                 <span class="html"></span>
               </div>
+            </div>
             <div class="bar">
               <div class="info">
                 <span>CSS</span>
@@ -126,12 +130,14 @@
               <div class="progress-line">
                 <span class="css"></span>
               </div>
+            </div>
             <div class="bar">
               <div class="info">
-              <span>Javascript</span>
+                <span>Javascript</span>
               </div>
               <div class="progress-line">
-              <span class="javascript"></span>
+                <span class="javascript"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -148,98 +154,102 @@
            have played a key role in shaping my skills and professional growth. Some of the highlights include:
         </p>
       </div>
-      <div id="projectCarousel" class="carousel slide" >
-        <div class="carousel-indicators" style="bottom: -30px;">
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Project 4"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" aria-label="Project 5"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" aria-label="Project 6"></button>
+      <div class="carousel-container">
+        <div id="projectCarousel" class="carousel slide">
+          <div class=" carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/shooting_range.png" class="img-fluid d-block mx-auto" alt="Shooting Range">
+              <div class="carousel-caption d-md-block">
+                <h3>Shooting Range Data Management System</h3>
+                <p>A while ago, a shooting range organization in Athens reached out to me and a colleague, sharing the 
+                    challenges they were facing. They explained that many of their processes—such as registration, paperwork, 
+                    inventory management, and training/match statistics—were still done manually. Members of the organization had to 
+                    complete paper forms and submit them to local authorities, leading to inefficiencies and a lack of automation.
+                    To address these issues, we came up with the idea for a desktop application that would automate these procedures 
+                    and streamline the entire workflow. Unfortunately, the project was eventually dropped as the organization was unable
+                    to continue supporting it. However, this experience was invaluable in expanding my portfolio, particularly in C# development.
+                  </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/team_ready.png" class="img-fluid d-block mx-auto" alt="Vodafone Appointment Manager">
+              <div class="carousel-caption d-md-block">
+                <h3>Vodafone Appointment Manager</h3>
+                <p>This Java-based application was developed during my time at Vodafone Group, where I worked as a salesman and tech specialist.
+                  The company required daily tracking of appointments and the generation of mandatory monthly reports. The application allowed 
+                  users to schedule appointments with customers, as well as edit existing appointment details. Data was organized in folders—named
+                    according to year and month—and stored in .txt files. At the end of each day or month, the system could generate .xlsx reports,
+                    significantly reducing the time employees spent on manual documentation and improving overall efficiency.
+                  </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/thesis.png" class="img-fluid d-block mx-auto" alt="Exam Schedule Composition">
+              <div class="carousel-caption d-md-block">
+                <h3>Exam Schedule Composition System (Thesis)</h3>
+                <p>This application was developed in Java, alongside supporting libraries, as part of my undergraduate thesis. 
+                  Its primary objective is to generate the final examination schedule for a university semester, with the long-term goal 
+                  of adapting it for broader use across academic institutions throughout Greece. The system relies exclusively on `.xlsx` 
+                  files for both input and output, reading structured data at startup and writing any changes back to Excel files. This design
+                  choice—avoiding the use of traditional databases—ensures maximum portability and simplicity in maintenance, while still 
+                  enabling robust data processing through well-defined spreadsheet formatting.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/hotel_management.png" class="img-fluid d-block mx-auto" alt="Hotel Management Login page">
+              <div class="carousel-caption d-md-block">
+                <h3>Hotel Management System</h3>
+                <p>This was a final project developed during my time at university. The application was designed for hotel booking management, 
+                  catering to both hotel administrators and customers. Hotel staff could add rooms, manage bookings, and handle various operational 
+                  details, while customers could browse hotel information, view room images, and make reservations. The app featured two distinct 
+                  user interfaces, tailored to the type of user logged in. It utilized a database to store and manage all relevant information—from 
+                  reservations to room details. Built using C#, this project sparked my deeper interest in backend development and helped solidify my 
+                  understanding of fullstack application design.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/hardware_eshop.png" class="img-fluid d-block mx-auto" alt="Hardware e-Shop Website">
+              <div class="carousel-caption d-md-block">
+                <h3>Hardware Shop (e-Shop)</h3>
+                <p>Developed as a final project for a university course, this was one of the most enjoyable projects I worked on at the time. Built using 
+                  HTML, CSS, PHP, and a database, the application is a fully functional e-shop where users can browse a wide range of computer hardware products, 
+                  view item details, and place orders. The platform was designed with user-friendliness and scalability in mind. Through the integrated database,
+                  administrators could easily add, edit, or remove product listings. This project greatly enhanced my understanding of database management and 
+                  highlighted the importance of delivering a smooth and intuitive user experience.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/cpp_final.png" class="img-fluid d-block mx-auto" alt="Labyrinth Game">
+              <div class="carousel-caption d-md-block">
+                <h3>Labyrinth Game VS Computer</h3>
+                <p>Built using C++, this project was another final assignment developed during my time at university. It’s a simple yet engaging labyrinth
+                  game where the player must locate a gem that spawns at random positions on the map and periodically changes location after a certain 
+                  number of moves. The twist is that the player competes against a computer opponent, which uses a basic pathfinding algorithm to locate 
+                  the gem. The goal is to reach the gem before the computer does. The game runs in the console, and the player navigates the labyrinth using
+                    the arrow keys. The map is loaded from a .txt file provided as a command-line argument at launch. This was a fun and rewarding project 
+                    that significantly deepened my understanding of object-oriented programming and game logic.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+          <div class="carousel-indicators" style="bottom: -30px;">
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Project 4"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" aria-label="Project 5"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" aria-label="Project 6"></button>
+          </div>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/shooting_range.png" class="d-block mx-auto" alt="Shooting Range">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Shooting Range Data Management System</h3>
-              <p>A while ago, a shooting range organization in Athens reached out to me and a colleague, sharing the 
-                challenges they were facing. They explained that many of their processes—such as registration, paperwork, 
-                inventory management, and training/match statistics—were still done manually. Members of the organization had to 
-                complete paper forms and submit them to local authorities, leading to inefficiencies and a lack of automation.
-                To address these issues, we came up with the idea for a desktop application that would automate these procedures 
-                and streamline the entire workflow. Unfortunately, the project was eventually dropped as the organization was unable
-                 to continue supporting it. However, this experience was invaluable in expanding my portfolio, particularly in C# development.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/team_ready.png" class="d-block mx-auto" alt="Vodafone Appointment Manager">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Vodafone Appointment Manager</h3>
-              <p>This Java-based application was developed during my time at Vodafone Group, where I worked as a salesman and tech specialist.
-                 The company required daily tracking of appointments and the generation of mandatory monthly reports. The application allowed 
-                 users to schedule appointments with customers, as well as edit existing appointment details. Data was organized in folders—named
-                  according to year and month—and stored in .txt files. At the end of each day or month, the system could generate .xlsx reports,
-                   significantly reducing the time employees spent on manual documentation and improving overall efficiency.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/thesis.png" class="d-block mx-auto" alt="Exam Schedule Composition">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Exam Schedule Composition System (Thesis)</h3>
-              <p>This application was developed in Java, alongside supporting libraries, as part of my undergraduate thesis. 
-                Its primary objective is to generate the final examination schedule for a university semester, with the long-term goal 
-                of adapting it for broader use across academic institutions throughout Greece. The system relies exclusively on `.xlsx` 
-                files for both input and output, reading structured data at startup and writing any changes back to Excel files. This design
-                 choice—avoiding the use of traditional databases—ensures maximum portability and simplicity in maintenance, while still 
-                 enabling robust data processing through well-defined spreadsheet formatting.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/hotel_management.png" class="d-block mx-auto" alt="Hotel Management Login page">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Hotel Management System</h3>
-              <p>This was a final project developed during my time at university. The application was designed for hotel booking management, 
-                catering to both hotel administrators and customers. Hotel staff could add rooms, manage bookings, and handle various operational 
-                details, while customers could browse hotel information, view room images, and make reservations. The app featured two distinct 
-                user interfaces, tailored to the type of user logged in. It utilized a database to store and manage all relevant information—from 
-                reservations to room details. Built using C#, this project sparked my deeper interest in backend development and helped solidify my 
-                understanding of fullstack application design. </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/hardware_eshop.png" class="d-block mx-auto" alt="Hotel Management Login page">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Hardware Shop (e-Shop)</h3>
-              <p>Developed as a final project for a university course, this was one of the most enjoyable projects I worked on at the time. Built using 
-                HTML, CSS, PHP, and a database, the application is a fully functional e-shop where users can browse a wide range of computer hardware products, 
-                view item details, and place orders. The platform was designed with user-friendliness and scalability in mind. Through the integrated database,
-                 administrators could easily add, edit, or remove product listings. This project greatly enhanced my understanding of database management and 
-                 highlighted the importance of delivering a smooth and intuitive user experience.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/cpp_final.png" class="d-block mx-auto" alt="Labyrinth Game">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Labyrinth Game VS Computer</h3>
-              <p>Built using C++, this project was another final assignment developed during my time at university. It’s a simple yet engaging labyrinth
-                 game where the player must locate a gem that spawns at random positions on the map and periodically changes location after a certain 
-                 number of moves. The twist is that the player competes against a computer opponent, which uses a basic pathfinding algorithm to locate 
-                 the gem. The goal is to reach the gem before the computer does. The game runs in the console, and the player navigates the labyrinth using
-                  the arrow keys. The map is loaded from a .txt file provided as a command-line argument at launch. This was a fun and rewarding project 
-                  that significantly deepened my understanding of object-oriented programming and game logic.</p>
-              </p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
       <br>
       <div class="parbox"><p>You can find more details about these and other personal projects at my Github page.</p></div>
@@ -258,8 +268,7 @@
       </div>
 
     </section>
-  </body>
-  <div class="social">
+    <div class="social">
     <a href="https://github.com/Gouvo7" target="_blank">
       <img src="images/git_ico.png" />
     </a>
@@ -270,4 +279,5 @@
       <img src="images/linkedin_ico.png" />
     </a>
   </div>
+  </body>
 </html>
