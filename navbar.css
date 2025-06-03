@@ -11,7 +11,7 @@
   height: 60px;
   position: fixed;
   display: inline-block;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .navbar .logo img {
@@ -80,6 +80,42 @@ ul {
 
   .navbar a {
     font-size: 18px;
+    margin: 0 8px;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 470px) {
+  .navbar {
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar .logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .logo img {
+    height: auto;
+    width: 50px;
+  }
+
+  ul.links {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+
+  .navbar a {
+    font-size: 12px;
     margin: 0 8px;
     padding: 4px 6px;
   }

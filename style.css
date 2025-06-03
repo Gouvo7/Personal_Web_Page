@@ -465,8 +465,8 @@ section {
 
   .social img {
     margin: 10px;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     transition: transform 0.3s;
   }
 
@@ -507,4 +507,87 @@ section {
     padding: 10px;
   }
 }
-/* End Region Skills */
+
+@media (max-width: 380px) {
+  .section_title h1 {
+    font-size: 1.4em;
+  }
+
+  .hello_box h2,
+  .welcome_box h2,
+  .container h1,
+  .container h2 {
+    font-size: 1.8em;
+  }
+
+  .message_box h3,
+  .parbox p,
+  .skills h3 {
+    font-size: 1.1em;
+  }
+
+  .parbox h3{
+    font-size: 1.3em;
+  }
+
+  .get_started img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    transform: translateY(-50%);
+  }
+
+  .social img {
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+  }
+
+  .social img:hover {
+    transform: translateX(10px) scale(1.2);
+  }
+  
+  .carousel-caption {
+    position: static;
+    margin: 20px auto 0 auto;
+    width: 95%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .carousel-caption p {
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next{
+    top: 20%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+
+  .skills {
+    width: 100%;
+    padding: 10px;
+  }
+}
