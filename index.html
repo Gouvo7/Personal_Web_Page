@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="My personal website" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="author" content="Nektarios Gkouvousis" />
     <title>Nektarios Gkouvousis</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,264 +23,479 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
+      defer
     ></script>
-    <script src="navigation.js" defer></script>
-    <script src="style.js"></script>
     <script defer src="script.js"></script>
-
-    <link rel="stylesheet" href="loading.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="images/logo2.ico" />
   </head>
   <body>
-    <div class="navbar">
-      <div class="logo" onclick="window.location.href='index.html'">
-        <img src="images/logo2.png" />
-      </div>
-      <ul class="links">
-        <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
-        <li>
-          <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
-        </li>
-        <li>
-          <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <div class="hello_box hidden_right">
-      <h2>Hello there!</h2>
-    </div>
-    <div class="welcome_box hidden_left" style="transition-delay: 1s;">
-      <h2>I am Nektarios and I am a Full Stack Software Engineer.</h2>
-    </div>
-    <div class="message_box hidden_right" style="transition-delay: 2s;">
-      <h3>I love building things and designing user interfaces.</h3>
-    </div>
-    <br>
-    <div class="get_started hidden_left" style="transition-delay: 3s;" id="get_started">
-      <p>Get Started</p>
-      <img src="images/transparent_enter.png" />
+    <div class="backdrop">
+      <div class="orb orb-orange"></div>
+      <div class="orb orb-purple"></div>
     </div>
 
-    <section id="about">
-      <div class="section_title">
-        <h1>About Me</h1>
+    <header class="nav-shell">
+      <div class="nav-bar container-xl">
+        <div class="brand-block">
+          <div class="brand-logo" onclick="window.location.href='index.html'">
+            <img src="images/logo2.png" alt="Personal logo" />
+          </div>
+          <div class="brand-meta">
+            <span class="eyebrow">Portfolio</span>
+            <span class="brand-name">Nektarios Gkouvousis</span>
+          </div>
+        </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links" data-nav-menu>
+          <a href="#about" data-scroll>About</a>
+          <a href="#projects" data-scroll>Projects</a>
+          <a href="#contact" data-scroll>Contact</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark or light theme"
+            data-theme-toggle
+          >
+            <span class="theme-icon">☾</span>
+            <span class="theme-label">Dark mode</span>
+          </button>
+        </nav>
       </div>
-      <div class="parbox">
-        <p>
-          I’m based in Athens, Greece, and I’m 24 years old. Currently, I’m pursuing a degree in 
-          Informatics and Computer Engineering at the University of West Attica. Alongside my studies,
-          I work at <a href="https://www.datablue.gr/">DataBlue S.A.</a> as a Junior Fullstack .NET Developer.
-          In this role, I’m actively involved in maintaining an API and developing features for a desktop application
-          designed to support doctors and enhance their day-to-day workflow. I’m proud to be part of a team that is
-          making a meaningful impact on the healthcare industry by using technology to improve medical professionals'
-          experiences.
-          <br><br> In my free time, I enjoy building personal projects and exploring new technologies. I’m passionate 
-          about software development and always eager to grow my skill set and take on new challenges. When I’m not coding, 
-          I like to relax by playing video games, watching movies and TV series, or spending quality time with friends and family.
-        </p>
-        <br>
-      </div>
-      <div class="parbox">
-        <p>
-          Throughout my journey of learning and building projects, I’ve explored a wide range of technologies and software stacks. 
-          Below are some of the software stacks I actively use, but for me learning is a continuous process, and I’m always 
-          striving to expand my skill set.
-        </p>
-      </div>
-      <br><br>
-      <div class="parbox">
-        <div class="skills">
-          <h3>Software Stacks</h3>
-          <div class="skills-bar">
-            <div class="bar">
-              <div class="info">
-                <span>C#</span>
-              </div>
-              <div class="progress-line">
-                <span class="csharp"></span>
-              </div>
+    </header>
+
+    <main>
+      <section class="hero container-xl">
+        <div class="hero-grid">
+          <div class="hero-copy" data-animate>
+            <div class="pill pill-soft hero-greeting">Hello there!</div>
+            <h1>
+              I am Nektarios and I am a Full Stack Software Engineer crafting
+              thoughtful experiences.
+            </h1>
+            <p class="lede">
+              I love building things and designing user interfaces.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-accent" href="#about" data-scroll>
+                Get started
+              </a>
+              <a class="btn btn-ghost" href="#projects" data-scroll>
+                View projects
+              </a>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Java</span>
-              </div>
-              <div class="progress-line">
-                <span class="java"></span>
-              </div>
+            <div class="chip-row">
+              <span class="chip">Athens, Greece</span>
+              <span class="chip">Junior Fullstack .NET Developer @ DataBlue S.A.</span>
+              <span class="chip">University of West Attica</span>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>Python</span>
-              </div>
-              <div class="progress-line">
-                <span class="python"></span>
-              </div>
+            <div class="note-card" data-animate>
+              <p>
+                I enjoy shipping products end-to-end, from well-crafted APIs and
+                desktop experiences to interfaces that feel intentional and
+                refined.
+              </p>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>HTML</span>
-              </div>
-              <div class="progress-line">
-                <span class="html"></span>
-              </div>
+          </div>
+          <div class="hero-panel" data-animate>
+            <div class="panel-header">
+              <span class="pill pill-glow">Full Stack Focus</span>
+              <span class="badge">.NET • Java • Python • Web</span>
             </div>
-            <div class="bar">
-              <div class="info">
-                <span>CSS</span>
-              </div>
-              <div class="progress-line">
-                <span class="css"></span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <span>Javascript</span>
-              </div>
-              <div class="progress-line">
-                <span class="javascript"></span>
+            <div class="panel-body">
+              <p>
+                Currently maintaining APIs and building desktop application
+                features that help doctors streamline their workflow at
+                <a href="https://www.datablue.gr/" target="_blank"
+                  >DataBlue S.A.</a
+                >.
+              </p>
+              <div class="panel-grid">
+                <div class="stat-card">
+                  <span class="label">Experience</span>
+                  <span class="value">Fullstack & UI</span>
+                </div>
+                <div class="stat-card">
+                  <span class="label">Location</span>
+                  <span class="value">Athens, GR</span>
+                </div>
+                <div class="stat-card">
+                  <span class="label">Focus</span>
+                  <span class="value">Product polish</span>
+                </div>
+                <div class="stat-card">
+                  <span class="label">Collaboration</span>
+                  <span class="value">Team-first</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="section_title">
-        <h1>Projects</h1>
-      </div>
-      <div class="parbox">
-        <p>
-          Over the course of my development journey, I’ve worked on a variety of projects that have 
-          helped me gain valuable experience and deepen my knowledge as a software developer. These projects
-           have played a key role in shaping my skills and professional growth. Some of the highlights include:
-        </p>
-      </div>
-      <div class="carousel-container">
-        <div id="projectCarousel" class="carousel slide">
-          <div class=" carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/shooting_range.png" class="img-fluid d-block mx-auto" alt="Shooting Range">
-              <div class="carousel-caption d-md-block">
-                <h3>Shooting Range Data Management System</h3>
-                <p>A while ago, a shooting range organization in Athens reached out to me and a colleague, sharing the 
-                    challenges they were facing. They explained that many of their processes—such as registration, paperwork, 
-                    inventory management, and training/match statistics—were still done manually. Members of the organization had to 
-                    complete paper forms and submit them to local authorities, leading to inefficiencies and a lack of automation.
-                    To address these issues, we came up with the idea for a desktop application that would automate these procedures 
-                    and streamline the entire workflow. Unfortunately, the project was eventually dropped as the organization was unable
-                    to continue supporting it. However, this experience was invaluable in expanding my portfolio, particularly in C# development.
-                  </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/team_ready.png" class="img-fluid d-block mx-auto" alt="Vodafone Appointment Manager">
-              <div class="carousel-caption d-md-block">
-                <h3>Vodafone Appointment Manager</h3>
-                <p>This Java-based application was developed during my time at Vodafone Group, where I worked as a salesman and tech specialist.
-                  The company required daily tracking of appointments and the generation of mandatory monthly reports. The application allowed 
-                  users to schedule appointments with customers, as well as edit existing appointment details. Data was organized in folders—named
-                    according to year and month—and stored in .txt files. At the end of each day or month, the system could generate .xlsx reports,
-                    significantly reducing the time employees spent on manual documentation and improving overall efficiency.
-                  </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/thesis.png" class="img-fluid d-block mx-auto" alt="Exam Schedule Composition">
-              <div class="carousel-caption d-md-block">
-                <h3>Exam Schedule Composition System (Thesis)</h3>
-                <p>This application was developed in Java, alongside supporting libraries, as part of my undergraduate thesis. 
-                  Its primary objective is to generate the final examination schedule for a university semester, with the long-term goal 
-                  of adapting it for broader use across academic institutions throughout Greece. The system relies exclusively on `.xlsx` 
-                  files for both input and output, reading structured data at startup and writing any changes back to Excel files. This design
-                  choice—avoiding the use of traditional databases—ensures maximum portability and simplicity in maintenance, while still 
-                  enabling robust data processing through well-defined spreadsheet formatting.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/hotel_management.png" class="img-fluid d-block mx-auto" alt="Hotel Management Login page">
-              <div class="carousel-caption d-md-block">
-                <h3>Hotel Management System</h3>
-                <p>This was a final project developed during my time at university. The application was designed for hotel booking management, 
-                  catering to both hotel administrators and customers. Hotel staff could add rooms, manage bookings, and handle various operational 
-                  details, while customers could browse hotel information, view room images, and make reservations. The app featured two distinct 
-                  user interfaces, tailored to the type of user logged in. It utilized a database to store and manage all relevant information—from 
-                  reservations to room details. Built using C#, this project sparked my deeper interest in backend development and helped solidify my 
-                  understanding of fullstack application design.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/hardware_eshop.png" class="img-fluid d-block mx-auto" alt="Hardware e-Shop Website">
-              <div class="carousel-caption d-md-block">
-                <h3>Hardware Shop (e-Shop)</h3>
-                <p>Developed as a final project for a university course, this was one of the most enjoyable projects I worked on at the time. Built using 
-                  HTML, CSS, PHP, and a database, the application is a fully functional e-shop where users can browse a wide range of computer hardware products, 
-                  view item details, and place orders. The platform was designed with user-friendliness and scalability in mind. Through the integrated database,
-                  administrators could easily add, edit, or remove product listings. This project greatly enhanced my understanding of database management and 
-                  highlighted the importance of delivering a smooth and intuitive user experience.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/cpp_final.png" class="img-fluid d-block mx-auto" alt="Labyrinth Game">
-              <div class="carousel-caption d-md-block">
-                <h3>Labyrinth Game VS Computer</h3>
-                <p>Built using C++, this project was another final assignment developed during my time at university. It’s a simple yet engaging labyrinth
-                  game where the player must locate a gem that spawns at random positions on the map and periodically changes location after a certain 
-                  number of moves. The twist is that the player competes against a computer opponent, which uses a basic pathfinding algorithm to locate 
-                  the gem. The goal is to reach the gem before the computer does. The game runs in the console, and the player navigates the labyrinth using
-                    the arrow keys. The map is loaded from a .txt file provided as a command-line argument at launch. This was a fun and rewarding project 
-                    that significantly deepened my understanding of object-oriented programming and game logic.
-                </p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
-          <div class="carousel-indicators" style="bottom: -30px;">
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Project 4"></button>
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" aria-label="Project 5"></button>
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" aria-label="Project 6"></button>
+      </section>
+
+      <section id="about" class="section container-xl">
+        <div class="section-head" data-animate>
+          <p class="eyebrow pill pill-soft">Profile</p>
+          <div>
+            <h2>About Me</h2>
+            <p class="section-lede">
+              Always learning, shipping, and refining the craft of building
+              useful products.
+            </p>
           </div>
         </div>
-      </div>
-      <br>
-      <div class="parbox"><p>You can find more details about these and other personal projects at my Github page.</p></div>
-      
-    </section>
-    <section id="contact">
-      <div class="section_title">
-        <h1>Contact</h1>
-      </div>
-      <div class="parbox">
-        <p>If you want to reach out to me, feel free to send me an e-mail or contact me 
-          via social media. I'm always open about new opportunities and adventures!</p>
-        <h3>E-mail: gouvousisnektarios@gmail.com</h3>
-        <p>If you want to download my resume, click the link below</p>
-        <a href="src/CV_Nektarios GkouvousisEN.pdf" download><h3>Download my resume</h3></a>
-      </div>
+        <div class="card-grid two-col">
+          <article class="panel" data-animate>
+            <p>
+              I'm based in Athens, Greece, and I'm 24 years old. Currently, I'm
+              pursuing a degree in Informatics and Computer Engineering at the
+              University of West Attica. Alongside my studies, I work at
+              <a href="https://www.datablue.gr/">DataBlue S.A.</a> as a Junior
+              Fullstack .NET Developer. In this role, I'm actively involved in
+              maintaining an API and developing features for a desktop
+              application designed to support doctors and enhance their
+              day-to-day workflow. I'm proud to be part of a team that is making
+              a meaningful impact on the healthcare industry by using
+              technology to improve medical professionals' experiences.
+            </p>
+            <p class="top-space">
+              In my free time, I enjoy building personal projects and exploring
+              new technologies. I'm passionate about software development and
+              always eager to grow my skill set and take on new challenges. When
+              I'm not coding, I like to relax by playing video games, watching
+              movies and TV series, or spending quality time with friends and
+              family.
+            </p>
+          </article>
+          <article class="panel" data-animate>
+            <p>
+              Throughout my journey of learning and building projects, I've
+              explored a wide range of technologies and software stacks. Below
+              are some of the software stacks I actively use, but for me
+              learning is a continuous process, and I'm always striving to
+              expand my skill set.
+            </p>
+            <div class="skills" aria-label="Software stacks">
+              <div class="skills-list">
+                <div class="skill" data-skill="90">
+                  <div class="skill-label">C#</div>
+                  <div class="skill-bar"><span class="fill csharp"></span></div>
+                </div>
+                <div class="skill" data-skill="80">
+                  <div class="skill-label">Java</div>
+                  <div class="skill-bar"><span class="fill java"></span></div>
+                </div>
+                <div class="skill" data-skill="80">
+                  <div class="skill-label">Python</div>
+                  <div class="skill-bar">
+                    <span class="fill python"></span>
+                  </div>
+                </div>
+                <div class="skill" data-skill="80">
+                  <div class="skill-label">HTML</div>
+                  <div class="skill-bar"><span class="fill html"></span></div>
+                </div>
+                <div class="skill" data-skill="60">
+                  <div class="skill-label">CSS</div>
+                  <div class="skill-bar"><span class="fill css"></span></div>
+                </div>
+                <div class="skill" data-skill="60">
+                  <div class="skill-label">Javascript</div>
+                  <div class="skill-bar">
+                    <span class="fill javascript"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    </section>
-    <div class="social">
-    <a href="https://github.com/Gouvo7" target="_blank">
-      <img src="images/git_ico.png" />
-    </a>
-    <a href="https://www.instagram.com/nektarios.gouvousis/" target="_blank">
-      <img src="images/insta_ico.png" />
-    </a>
-    <a href="https://www.linkedin.com/in/nektarios-gkouvousis-581a9a1a8/" target="_blank">
-      <img src="images/linkedin_ico.png" />
-    </a>
-  </div>
+      <section id="projects" class="section container-xl">
+        <div class="section-head" data-animate>
+          <p class="eyebrow pill pill-soft">Work</p>
+          <div>
+            <h2>Projects</h2>
+            <p class="section-lede">
+              Over the course of my development journey, I've worked on a
+              variety of projects that have helped me gain valuable experience
+              and deepen my knowledge as a software developer. These projects
+              have played a key role in shaping my skills and professional
+              growth. Some of the highlights include:
+            </p>
+          </div>
+        </div>
+        <div class="panel carousel-panel" data-animate>
+          <div id="projectCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="images/shooting_range.png"
+                  class="img-fluid d-block mx-auto"
+                  alt="Shooting Range"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h3>Shooting Range Data Management System</h3>
+                  <p>
+                    A while ago, a shooting range organization in Athens reached
+                    out to me and a colleague, sharing the challenges they were
+                    facing. They explained that many of their processes—such as
+                    registration, paperwork, inventory management, and
+                    training/match statistics—were still done manually. Members
+                    of the organization had to complete paper forms and submit
+                    them to local authorities, leading to inefficiencies and a
+                    lack of automation. To address these issues, we came up with
+                    the idea for a desktop application that would automate these
+                    procedures and streamline the entire workflow.
+                    Unfortunately, the project was eventually dropped as the
+                    organization was unable to continue supporting it. However,
+                    this experience was invaluable in expanding my portfolio,
+                    particularly in C# development.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/team_ready.png"
+                  class="img-fluid d-block mx-auto"
+                  alt="Vodafone Appointment Manager"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h3>Vodafone Appointment Manager</h3>
+                  <p>
+                    This Java-based application was developed during my time at
+                    Vodafone Group, where I worked as a salesman and tech
+                    specialist. The company required daily tracking of
+                    appointments and the generation of mandatory monthly
+                    reports. The application allowed users to schedule
+                    appointments with customers, as well as edit existing
+                    appointment details. Data was organized in folders—named
+                    according to year and month—and stored in .txt files. At the
+                    end of each day or month, the system could generate .xlsx
+                    reports, significantly reducing the time employees spent on
+                    manual documentation and improving overall efficiency.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/thesis.png"
+                  class="img-fluid d-block mx-auto"
+                  alt="Exam Schedule Composition"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h3>Exam Schedule Composition System (Thesis)</h3>
+                  <p>
+                    This application was developed in Java, alongside supporting
+                    libraries, as part of my undergraduate thesis. Its primary
+                    objective is to generate the final examination schedule for
+                    a university semester, with the long-term goal of adapting
+                    it for broader use across academic institutions throughout
+                    Greece. The system relies exclusively on `.xlsx` files for
+                    both input and output, reading structured data at startup
+                    and writing any changes back to Excel files. This
+                    design—avoiding the use of traditional databases—ensures
+                    maximum portability and simplicity in maintenance, while
+                    still enabling robust data processing through well-defined
+                    spreadsheet formatting.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/hotel_management.png"
+                  class="img-fluid d-block mx-auto"
+                  alt="Hotel Management Login page"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h3>Hotel Management System</h3>
+                  <p>
+                    This was a final project developed during my time at
+                    university. The application was designed for hotel booking
+                    management, catering to both hotel administrators and
+                    customers. Hotel staff could add rooms, manage bookings, and
+                    handle various operational details, while customers could
+                    browse hotel information, view room images, and make
+                    reservations. The app featured two distinct user interfaces,
+                    tailored to the type of user logged in. It utilized a
+                    database to store and manage all relevant information—from
+                    reservations to room details. Built using C#, this project
+                    sparked my deeper interest in backend development and
+                    helped solidify my understanding of fullstack application
+                    design.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/hardware_eshop.png"
+                  class="img-fluid d-block mx-auto"
+                  alt="Hardware e-Shop Website"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h3>Hardware Shop (e-Shop)</h3>
+                  <p>
+                    Developed as a final project for a university course, this
+                    was one of the most enjoyable projects I worked on at the
+                    time. Built using HTML, CSS, PHP, and a database, the
+                    application is a fully functional e-shop where users can
+                    browse a wide range of computer hardware products, view item
+                    details, and place orders. The platform was designed with
+                    user-friendliness and scalability in mind. Through the
+                    integrated database, administrators could easily add, edit,
+                    or remove product listings. This project greatly enhanced my
+                    understanding of database management and highlighted the
+                    importance of delivering a smooth and intuitive user
+                    experience.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/cpp_final.png"
+                  class="img-fluid d-block mx-auto"
+                  alt="Labyrinth Game"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h3>Labyrinth Game VS Computer</h3>
+                  <p>
+                    Built using C++, this project was another final assignment
+                    developed during my time at university. It's a simple yet
+                    engaging labyrinth game where the player must locate a gem
+                    that spawns at random positions on the map and periodically
+                    changes location after a certain number of moves. The twist
+                    is that the player competes against a computer opponent,
+                    which uses a basic pathfinding algorithm to locate the gem.
+                    The goal is to reach the gem before the computer does. The
+                    game runs in the console, and the player navigates the
+                    labyrinth using the arrow keys. The map is loaded from a
+                    .txt file provided as a command-line argument at launch.
+                    This was a fun and rewarding project that significantly
+                    deepened my understanding of object-oriented programming and
+                    game logic.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Project 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide-to="1"
+                aria-label="Project 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide-to="2"
+                aria-label="Project 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide-to="3"
+                aria-label="Project 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide-to="4"
+                aria-label="Project 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide-to="5"
+                aria-label="Project 6"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div class="panel note-panel" data-animate>
+          <p>You can find more details about these and other personal projects at my Github page.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section container-xl">
+        <div class="section-head" data-animate>
+          <p class="eyebrow pill pill-soft">Connect</p>
+          <div>
+            <h2>Contact</h2>
+            <p class="section-lede">
+              If you want to reach out to me, feel free to send me an e-mail or
+              contact me via social media. I'm always open about new
+              opportunities and adventures!
+            </p>
+          </div>
+        </div>
+        <div class="card-grid two-col">
+          <article class="panel" data-animate>
+            <h3>E-mail: gouvousisnektarios@gmail.com</h3>
+            <p>
+              If you want to download my resume, click the link below.
+            </p>
+            <a
+              class="btn btn-accent"
+              href="src/CV_Nektarios GkouvousisEN.pdf"
+              download
+            >
+              Download my resume
+            </a>
+          </article>
+          <article class="panel social-panel" data-animate>
+            <p>Connect on my social channels.</p>
+            <div class="social-links">
+              <a href="https://github.com/Gouvo7" target="_blank">
+                <img src="images/git_ico.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.instagram.com/nektarios.gouvousis/" target="_blank">
+                <img src="images/insta_ico.png" alt="Instagram" />
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.linkedin.com/in/nektarios-gkouvousis-581a9a1a8/" target="_blank">
+                <img src="images/linkedin_ico.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
