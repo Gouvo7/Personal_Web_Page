@@ -75,17 +75,19 @@
 
     <main>
       <section class="hero container-xl">
-        <div class="hero-grid">
-          <div class="hero-copy" data-animate>
-            <div class="pill pill-soft hero-greeting">Hello there!</div>
-            <h1>
+        <div class="hero-stage">
+          <div class="hero-greeting">
+            <span>Hello there!</span>
+          </div>
+          <div class="hero-headline">
+            <h1 class="hero-title hero-drop">
               I am Nektarios and I am a Full Stack Software Engineer crafting
               thoughtful experiences.
             </h1>
-            <p class="lede">
+            <p class="lede hero-drop hero-drop-delay">
               I love building things and designing user interfaces.
             </p>
-            <div class="cta-row">
+            <div class="cta-row hero-cta hero-drop hero-drop-cta">
               <a class="btn btn-accent" href="#about" data-scroll>
                 Get started
               </a>
@@ -93,23 +95,26 @@
                 View projects
               </a>
             </div>
-            <div class="chip-row">
-              <span class="chip">Athens, Greece</span>
-              <span class="chip">Junior Fullstack .NET Developer @ DataBlue S.A.</span>
-              <span class="chip">University of West Attica</span>
-            </div>
-            <div class="note-card" data-animate>
-              <p>
-                I enjoy shipping products end-to-end, from well-crafted APIs and
-                desktop experiences to interfaces that feel intentional and
-                refined.
-              </p>
-            </div>
           </div>
-          <div class="hero-panel" data-animate>
+          <div class="hero-grid">
+            <div class="hero-copy hero-left">
+              <div class="chip-row stagger">
+                <span class="chip">Athens, Greece</span>
+                <span class="chip">Junior Fullstack .NET Developer @ DataBlue S.A.</span>
+                <span class="chip">University of West Attica</span>
+              </div>
+              <div class="note-card stagger">
+                <p>
+                  I enjoy shipping products end-to-end, from well-crafted APIs and
+                  desktop experiences to interfaces that feel intentional and
+                  refined.
+                </p>
+              </div>
+            </div>
+            <div class="hero-panel hero-right">
             <div class="panel-header">
               <span class="pill pill-glow">Full Stack Focus</span>
-              <span class="badge">.NET • Java • Python • Web</span>
+              <span class="badge">• .NET • XAML • SQL • Python • Web</span>
             </div>
             <div class="panel-body">
               <p>
@@ -140,10 +145,11 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
 
-      <section id="about" class="section container-xl">
-        <div class="section-head" data-animate>
+      <section id="about" class="section container-xl section-rise">
+        <div class="section-head rise-block" data-animate>
           <p class="eyebrow pill pill-soft">Profile</p>
           <div>
             <h2>About Me</h2>
@@ -220,21 +226,23 @@
         </div>
       </section>
 
-      <section id="projects" class="section container-xl">
-        <div class="section-head" data-animate>
+      <section id="projects" class="section container-xl section-rise">
+        <div class="section-head rise-block" data-animate>
           <p class="eyebrow pill pill-soft">Work</p>
           <div>
             <h2>Projects</h2>
-            <p class="section-lede">
-              Over the course of my development journey, I've worked on a
-              variety of projects that have helped me gain valuable experience
-              and deepen my knowledge as a software developer. These projects
-              have played a key role in shaping my skills and professional
-              growth. Some of the highlights include:
-            </p>
           </div>
         </div>
-        <div class="panel carousel-panel" data-animate>
+        <article class="panel" data-animate>
+          <p class="section-lede">
+            Over the course of my development journey, I've worked on a
+            variety of projects that have helped me gain valuable experience
+            and deepen my knowledge as a software developer. These projects
+            have played a key role in shaping my skills and professional
+            growth. Some of the highlights include:
+          </p>
+        </article>
+        <div class="panel carousel-panel rise-block" data-animate>
           <div id="projectCarousel" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -446,25 +454,26 @@
             </div>
           </div>
         </div>
-        <div class="panel note-panel" data-animate>
+        <div class="panel note-panel rise-block" data-animate>
           <p>You can find more details about these and other personal projects at my Github page.</p>
         </div>
       </section>
 
-      <section id="contact" class="section container-xl">
-        <div class="section-head" data-animate>
+      <section id="contact" class="section container-xl section-rise">
+        <div class="section-head rise-block" data-animate>
           <p class="eyebrow pill pill-soft">Connect</p>
           <div>
             <h2>Contact</h2>
+            
+          </div>
+        </div>
+        <div class="card-grid two-col">
+          <article class="panel contact-email rise-block" data-animate>
             <p class="section-lede">
               If you want to reach out to me, feel free to send me an e-mail or
               contact me via social media. I'm always open about new
               opportunities and adventures!
             </p>
-          </div>
-        </div>
-        <div class="card-grid two-col">
-          <article class="panel" data-animate>
             <h3>E-mail: gouvousisnektarios@gmail.com</h3>
             <p>
               If you want to download my resume, click the link below.
@@ -477,7 +486,7 @@
               Download my resume
             </a>
           </article>
-          <article class="panel social-panel" data-animate>
+          <article class="panel social-panel rise-block" data-animate>
             <p>Connect on my social channels.</p>
             <div class="social-links">
               <a href="https://github.com/Gouvo7" target="_blank">
