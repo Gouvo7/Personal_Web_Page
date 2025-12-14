@@ -68,27 +68,40 @@ function initSmoothScroll() {
   });
 }
 
-function initAnimations() {
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          obs.unobserve(entry.target);
-          if (entry.target.classList.contains("skill")) {
-            entry.target.classList.add("visible");
-          }
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-  document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
+function initCarousel() {
+  const carousel = document.getElementById("projectCarousel");
+  if (!carousel) return;
+  const items = Array.from(carousel.querySelectorAll(".carousel-item"));
+  const indicators = Array.from(carousel.querySelectorAll(".carousel-indicators button"));
+  const prev = carousel.querySelector(".carousel-control-prev");
+  const next = carousel.querySelector(".carousel-control-next");
+  let current = items.findIndex((i) => i.classList.contains("active"));
+  if (current < 0) current = 0;
+
+  function setActive(index) {
+    const newIndex = (index + items.length) % items.length;
+    items.forEach((item, i) => item.classList.toggle("active", i === newIndex));
+    indicators.forEach((dot, i) => dot.classList.toggle("active", i === newIndex));
+    current = newIndex;
+  }
+
+  prev?.addEventListener("click", () => setActive(current - 1));
+  next?.addEventListener("click", () => setActive(current + 1));
+  indicators.forEach((dot, i) => dot.addEventListener("click", () => setActive(i)));
+}
+
+function initSkills() {
+  document.querySelectorAll(".skill").forEach((skill) => {
+    skill.classList.add("visible");
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  window.history.scrollRestoration = "manual";
+  window.scrollTo({ top: 0, behavior: "auto" });
   initTheme();
   initNavToggle();
   initSmoothScroll();
-  initAnimations();
+  initCarousel();
+  initSkills();
 });

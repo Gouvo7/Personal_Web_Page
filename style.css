@@ -71,6 +71,31 @@ img {
   display: block;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .container-xl {
   max-width: 1200px;
   width: 100%;
@@ -113,11 +138,11 @@ main {
 }
 
 section {
-  margin: 110px 0;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  margin: 170px 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
   position: relative;
-  scroll-margin-top: 110px;
+  scroll-margin-top: 120px;
 }
 
 main > section:not(.hero) {
@@ -140,11 +165,12 @@ section::after {
   content: "";
   position: absolute;
   left: 50%;
-  width: 120px;
+  width: min(92%, 1080px);
   height: 1px;
-  bottom: -48px;
+  bottom: -82px;
   transform: translateX(-50%);
   background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--border-color) 70%, transparent), transparent);
+  pointer-events: none;
 }
 
 .hero {
@@ -230,6 +256,13 @@ section::after {
   transform: translateY(-60px);
   animation: helloDrop 0.95s cubic-bezier(0.22, 1.02, 0.36, 1) forwards,
     helloGlow 3s ease-in-out 1s infinite alternate;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.2s ease;
+}
+
+.hero-greeting:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55), 0 0 0 8px rgba(234, 123, 21, 0.14);
+  filter: brightness(1.05);
 }
 
 .hero-drop {
@@ -279,7 +312,7 @@ section::after {
 .hero-panel {
   background: linear-gradient(135deg, color-mix(in srgb, var(--surface-2) 90%, transparent), var(--surface-3));
   border-radius: var(--radius-lg);
-  padding: 1.85rem;
+  padding: 1.65rem;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
   margin-top: 0.4rem;
@@ -287,6 +320,13 @@ section::after {
   justify-self: center;
   width: 100%;
   max-width: 520px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.4);
+  border-color: color-mix(in srgb, var(--purple-500) 35%, var(--border-color));
 }
 
 .hero-left,
@@ -384,6 +424,7 @@ section::after {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .stat-card .label {
@@ -399,6 +440,12 @@ section::after {
   letter-spacing: 0.01em;
 }
 
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--purple-500) 35%, var(--orange-500));
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
@@ -406,6 +453,10 @@ section::after {
   margin: 1.35rem 0;
   justify-content: center;
   opacity: 0;
+}
+
+.cta-row .btn {
+  will-change: transform;
 }
 
 .btn {
@@ -418,6 +469,10 @@ section::after {
   transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease,
     color 0.25s ease;
   text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.01);
 }
 
 .btn-accent {
@@ -464,6 +519,13 @@ section::after {
   border: 1px solid var(--border-color);
   font-weight: 600;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--purple-500) 50%, var(--orange-500));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 .pill {
@@ -473,6 +535,7 @@ section::after {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .pill-soft {
@@ -485,6 +548,12 @@ section::after {
   color: #fff;
   background: linear-gradient(120deg, rgba(130, 33, 160, 0.9), rgba(234, 123, 21, 0.8));
   box-shadow: 0 10px 25px rgba(234, 123, 21, 0.35);
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  filter: brightness(1.05);
 }
 
 .section-head {
@@ -522,6 +591,7 @@ section::after {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+  min-width: 200px;
 }
 
 .section-head > div h2 {
@@ -559,7 +629,7 @@ section::after {
   background: color-mix(in srgb, var(--surface-1) 92%, transparent);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 1.65rem;
+  padding: 1.35rem 1.65rem;
   color: var(--text-body);
   box-shadow: var(--shadow-sm);
   line-height: 1.7;
@@ -567,6 +637,13 @@ section::after {
   flex-direction: column;
   max-width: 1100px;
   margin: 24px auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  border-color: color-mix(in srgb, var(--purple-500) 35%, var(--border-color));
 }
 
 .panel h3 {
@@ -582,13 +659,9 @@ section::after {
   margin-top: 0.7rem;
 }
 
-.contact-email {
-  gap: 0.9rem;
-}
-
 .contact-email .btn {
   align-self: center;
-  margin-top: auto;
+  margin-top: 20px;
 }
 
 .top-space {
@@ -663,8 +736,16 @@ section::after {
   position: relative;
 }
 
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
 .carousel-inner {
-  padding-bottom: 86px;
+  padding-bottom: 40px;
 }
 
 .carousel-item img {
@@ -674,6 +755,8 @@ section::after {
   background: color-mix(in srgb, var(--surface-1) 90%, transparent);
   padding: 1rem;
   border-radius: var(--radius-lg);
+  display: block;
+  margin: 0 auto;
 }
 
 .carousel-caption {
@@ -686,6 +769,14 @@ section::after {
   margin-bottom: 0.75rem;
 }
 
+.carousel-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 8px 0 0;
+}
+
 .carousel-caption h3 {
   color: var(--text-strong);
   margin-top: 0;
@@ -693,44 +784,81 @@ section::after {
 
 .carousel-control-prev,
 .carousel-control-next {
-  position: absolute;
-  top: 100%;
-  transform: translateY(14px);
-  width: 56px;
-  height: 56px;
+  position: relative;
+  transform: none;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--surface-3) 92%, transparent);
-  border: 1px solid var(--border-color);
+  background: var(--orange-500);
+  border: 2px solid transparent;
   box-shadow: var(--shadow-sm);
-}
-
-.carousel-control-prev {
-  left: calc(50% - 70px);
-}
-
-.carousel-control-next {
-  left: calc(50% + 14px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background: linear-gradient(120deg, var(--purple-500), var(--orange-500));
+  transform: translateY(-2px);
+  border-color: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
+}
+
+.carousel-nav-row > .carousel-control-prev {
+  margin-right: 6px;
+}
+
+.carousel-nav-row > .carousel-control-next {
+  margin-left: 6px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100%;
+  height: 100%;
+  background: none;
+  display: grid;
+  place-items: center;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #0c0a12;
+  border-right: 2px solid #0c0a12;
+  transform: rotate(135deg);
+}
+
+.carousel-control-next-icon::before {
+  transform: rotate(-45deg);
 }
 
 .carousel-indicators {
-  margin-bottom: 12px;
-  margin-top: 62px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.carousel-indicators [data-bs-target] {
-  width: 14px;
-  height: 14px;
+.carousel-indicators button {
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background-color: color-mix(in srgb, var(--purple-500), var(--orange-500));
+  background-color: var(--orange-500);
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.carousel-indicators .active {
+.carousel-indicators button.active {
   background-color: var(--orange-500);
+  border-color: #fff;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+  transform: scale(1);
 }
 
 .note-panel {
@@ -901,9 +1029,8 @@ section::after {
 
   .carousel-control-prev,
   .carousel-control-next {
-    width: 46px;
-    height: 46px;
-    top: 38%;
+    width: 42px;
+    height: 42px;
   }
 }
 
