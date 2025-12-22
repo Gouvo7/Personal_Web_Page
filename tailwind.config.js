@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       colors: {
         deluge: "rgb(var(--color-deluge) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        "accent-soft": "rgb(var(--color-accent-soft) / <alpha-value>)",
         prelude: "rgb(var(--color-prelude) / <alpha-value>)",
         ink: "rgb(var(--color-ink) / <alpha-value>)",
         "ink-soft": "rgb(var(--color-ink-soft) / <alpha-value>)",
@@ -20,7 +22,7 @@ module.exports = {
         mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"]
       },
       boxShadow: {
-        glow: "0 20px 60px rgba(0,0,0,0.45)",
+        glow: "0 20px 60px rgba(255, 0, 0, 0.45)",
         card: "0 14px 40px rgba(0,0,0,0.28)"
       }
     }

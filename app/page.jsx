@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, Linkedin, Mail, Instagram, Moon, Sun } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
 
 const projects = [
   {
@@ -89,11 +89,11 @@ function Nav({ theme, onToggle }) {
         <div className="flex items-center gap-3">
           <img src="/images/logo2.png" alt="Logo" className="h-10 w-10 rounded-full shadow-card object-contain" />
           <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-deluge/80">Portfolio</p>
-            <p className="text-prelude font-semibold">Nektarios Gkouvousis</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-accent/80">Portfolio</p>
+            <p className="text-accent font-semibold">Nektarios Gkouvousis</p>
           </div>
         </div>
-        <div className="flex items-center gap-3 text-sm font-medium text-prelude/90">
+        <div className="flex items-center gap-3 text-sm font-medium text-accent/90">
           {[
             { href: "#projects", label: "Projects" },
             { href: "#skills", label: "Skills" },
@@ -103,7 +103,7 @@ function Nav({ theme, onToggle }) {
             <a
               key={link.href}
               href={link.href}
-              className="px-3 py-2 rounded-full hover:bg-white/10 hover:text-deluge transition-colors"
+              className="px-3 py-2 rounded-full hover:bg-white/10 hover:text-accent transition-colors"
             >
               {link.label}
             </a>
@@ -125,15 +125,15 @@ function Nav({ theme, onToggle }) {
 function Hero() {
   return (
     <section className="section pt-14">
-      <motion.div {...fadeUp} className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-deluge/15 border border-deluge/30 shadow-card">
-        <span className="text-xs uppercase tracking-[0.2em] text-deluge/90 font-semibold">Full Stack Engineer</span>
-        <span className="text-xs font-mono text-deluge">.NET / Web / UI</span>
+      <motion.div {...fadeUp} className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent/15 border border-accent/35 shadow-card">
+        <span className="text-xs uppercase tracking-[0.2em] text-accent/90 font-semibold">Full Stack Engineer</span>
+        <span className="text-xs font-mono text-accent">.NET / Web / UI</span>
       </motion.div>
       <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="mt-6 max-w-3xl">
         <h1 className="text-4xl sm:text-5xl font-semibold text-deluge leading-tight">
           I craft thoughtful software and interfaces that feel intentional and polished.
         </h1>
-        <p className="mt-4 text-lg text-prelude/90">
+        <p className="mt-4 text-lg text-accent/80 dark:text-accent/85">
           Blending backend reliability with front-end nuance. Currently focused on .NET desktop and web experiences.
         </p>
       </motion.div>
@@ -186,12 +186,12 @@ function ProjectsGrid() {
               Code <ArrowUpRight size={16} />
             </a>
           </div>
-          <p className="text-ink dark:text-prelude">{project.summary}</p>
+          <p className="text-accent/90 dark:text-accent-soft">{project.summary}</p>
           <div className="flex flex-wrap gap-2 text-ink dark:text-prelude">
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 rounded-full bg-deluge/15 text-deluge/90 text-xs font-semibold border border-deluge/40 dark:bg-deluge/25 dark:text-prelude"
+                className="px-3 py-1 rounded-full bg-accent/15 text-accent/90 text-xs font-semibold border border-accent/40 dark:bg-accent/25"
               >
                 {tech}
               </span>
@@ -213,9 +213,9 @@ function SkillsGrid() {
           transition={{ ...fadeUp.transition, delay: i * 0.04 }}
           className="glass rounded-xl p-4 border border-deluge/20 bg-white/90 text-ink shadow-card dark:bg-surface-1/95 dark:text-prelude"
         >
-          <div className="flex items-center justify-between text-prelude font-semibold">
+          <div className="flex items-center justify-between text-accent/90 font-semibold">
             <span className="text-deluge">{skill.label}</span>
-            <span className="text-ink/90 text-sm dark:text-prelude">{skill.level}%</span>
+            <span className="text-accent/80 text-sm dark:text-accent-soft">{skill.level}%</span>
           </div>
           <div className="h-2 rounded-full bg-deluge/15 mt-3 overflow-hidden">
             <div
@@ -232,11 +232,11 @@ function SkillsGrid() {
 function About() {
   return (
     <motion.div {...fadeUp} className="glass rounded-2xl p-6 space-y-4">
-      <p className="text-ink/95 dark:text-prelude">
+      <p className="text-accent/90 dark:text-accent-soft">
         Based in Athens, I build full-stack products across desktop and web. I care about reliable APIs, smooth UI,
         and shipping with polish.
       </p>
-      <p className="text-ink/90 dark:text-prelude/90">
+      <p className="text-accent/90 dark:text-accent-soft/90">
         Currently at DataBlue S.A. as a Junior Fullstack .NET Developer, expanding healthcare workflows and desktop
         experiences.
       </p>
@@ -249,7 +249,7 @@ function Contact() {
     <div className="grid gap-6 md:grid-cols-2">
       <motion.div {...fadeUp} className="glass rounded-2xl p-6 space-y-4">
         <h3 className="text-xl font-semibold text-deluge">Let’s build something</h3>
-        <p className="text-ink/95 dark:text-prelude">
+        <p className="text-accent/90 dark:text-accent-soft">
           Reach out for collaborations, opportunities, or just to say hi. I’m open to new challenges.
         </p>
         <a
@@ -273,7 +273,6 @@ function Contact() {
         <div className="flex flex-col gap-2">
           <SocialLink href="https://github.com/Gouvo7" icon={<Github size={18} />} label="GitHub" />
           <SocialLink href="https://www.linkedin.com/in/nektarios-gkouvousis-581a9a1a8/" icon={<Linkedin size={18} />} label="LinkedIn" />
-          <SocialLink href="https://www.instagram.com/nektarios.gouvousis/" icon={<Instagram size={18} />} label="Instagram" />
         </div>
       </motion.div>
     </div>
@@ -284,7 +283,7 @@ function SocialLink({ href, icon, label }) {
   return (
     <a
       href={href}
-      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 border border-deluge/20 text-ink/80 hover:border-deluge hover:text-deluge transition-colors dark:bg-surface-1/80 dark:text-prelude/85"
+      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 border border-accent/30 text-accent/80 hover:border-accent hover:text-accent transition-colors dark:bg-surface-1/80 dark:text-accent-soft"
       target="_blank"
       rel="noreferrer"
     >
@@ -296,10 +295,10 @@ function SocialLink({ href, icon, label }) {
 
 function Footer() {
   return (
-    <div className="section pt-10 pb-4 text-sm text-deluge/90 dark:text-prelude">
+    <div className="section pt-10 pb-4 text-sm text-accent/80 dark:text-accent-soft">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <p>© {new Date().getFullYear()} Nektarios Gkouvousis. Crafted with care.</p>
-        <a href="#top" className="hover:text-deluge dark:hover:text-prelude">Back to top</a>
+        <a href="#top" className="hover:text-accent dark:hover:text-accent-soft">Back to top</a>
       </div>
     </div>
   );
