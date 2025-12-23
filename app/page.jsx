@@ -84,10 +84,10 @@ export default function Home() {
 
 function Nav({ theme, onToggle }) {
   return (
-    <div className="sticky top-0 z-30 backdrop-blur-xl bg-surface-1/85 border-b border-deluge/20">
+    <div className="sticky top-0 z-30 backdrop-blur-xl bg-surface-1/100 border-b border-deluge/100">
       <div className="section flex items-center justify-between py-4">
         <div className="flex items-center gap-3">
-          <img src="/images/logo2.png" alt="Logo" className="h-10 w-10 rounded-full shadow-card object-contain" />
+          <img src="/images/logo2.ico" alt="Logo" className="h-10 w-10 object-fit" />
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-accent/80">Portfolio</p>
             <p className="text-accent font-semibold">Nektarios Gkouvousis</p>
@@ -181,9 +181,9 @@ function ProjectsGrid() {
             <h3 className="text-xl font-semibold text-deluge">{project.title}</h3>
             <a
               href={project.link}
-              className="text-deluge hover:text-ink transition-colors inline-flex items-center gap-1 text-sm"
+              className="text-deluge hover:text-ink dark:hover:text-white transition-colors inline-flex items-center gap-1 text-sm"
             >
-              Code <ArrowUpRight size={16} />
+              Code <ArrowUpRight size={18} />
             </a>
           </div>
           <p className="text-accent/90 dark:text-accent-soft">{project.summary}</p>
