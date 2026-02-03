@@ -85,15 +85,15 @@ export default function Home() {
 function Nav({ theme, onToggle }) {
   return (
     <div className="sticky top-0 z-30 backdrop-blur-xl bg-surface-1/100 border-b border-deluge/100">
-      <div className="section flex items-center justify-between py-4">
+      <div className="section flex items-center justify-between py-2">
         <div className="flex items-center gap-4">
-          <img src="/images/logo2.ico" alt="Logo" className="h-14 w-14 object-fit" />
+          <img src="/images/logo2.ico" alt="Logo" className="h-20 w-20 object-fit" />
           <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-accent/80">Portfolio</p>
-            <p className="text-accent font-semibold">Nektarios Gkouvousis</p>
+            <p className="text-bg uppercase tracking-[0.26em] text-accent/60">Portfolio</p>
+            <p className="text-accent font-semibold text-xl ">Nektarios Gkouvousis</p>
           </div>
         </div>
-        <div className="flex items-center gap-3 text-sm font-medium text-accent/90">
+        <div className="flex items-center gap-3 text-xl font-medium text-accent/90">
           {[
             { href: "#projects", label: "Projects" },
             { href: "#skills", label: "Skills" },
@@ -131,7 +131,7 @@ function Hero() {
       </motion.div>
       <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="mt-6 max-w-4xl">
         <h1 className="text-4xl sm:text-5xl font-semibold text-deluge leading-tight">
-          I craft software with love and care, because that's what I love to do.
+          I craft memorable software with care, because that's what I love to do.
         </h1>
         <p className="mt-4 text-lg text-accent/80 dark:text-accent/85">
           Blending backend reliability with front-end nuance. Currently focused on .NET desktop applications using a wide variety of toolsets and technologies.
@@ -265,7 +265,7 @@ function Contact() {
         </a>
         <div className="inline-flex justify-end ml-5">
           <a
-            href="/src/CV_Gkouvousis_en.pdf"
+            href="/CV_Gkouvousis_en.pdf"
             className="inline-flex px-5 py-3 rounded-full bg-deluge text-white font-semibold shadow-card hover:scale-[1.07] transition-transform"
           >
             Download resume
