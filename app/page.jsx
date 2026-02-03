@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, LinkedinIcon, LucideLinkedin, Mail, Moon, Sun } from "lucide-react";
 
 const projects = [
   {
@@ -31,10 +31,10 @@ const projects = [
 const skills = [
   { label: "C#", level: 90 },
   { label: "Java", level: 80 },
+  { label: "SQL", level: 80 },
   { label: "Python", level: 80 },
   { label: "HTML/CSS", level: 80 },
-  { label: "JavaScript", level: 70 },
-  { label: "SQL", level: 75 }
+  { label: "JavaScript", level: 70 }
 ];
 
 const fadeUp = {
@@ -86,8 +86,8 @@ function Nav({ theme, onToggle }) {
   return (
     <div className="sticky top-0 z-30 backdrop-blur-xl bg-surface-1/100 border-b border-deluge/100">
       <div className="section flex items-center justify-between py-4">
-        <div className="flex items-center gap-3">
-          <img src="/images/logo2.ico" alt="Logo" className="h-10 w-10 object-fit" />
+        <div className="flex items-center gap-4">
+          <img src="/images/logo2.ico" alt="Logo" className="h-14 w-14 object-fit" />
           <div>
             <p className="text-xs uppercase tracking-[0.16em] text-accent/80">Portfolio</p>
             <p className="text-accent font-semibold">Nektarios Gkouvousis</p>
@@ -124,29 +124,29 @@ function Nav({ theme, onToggle }) {
 
 function Hero() {
   return (
-    <section className="section pt-14">
+    <section className="section pt-18">
       <motion.div {...fadeUp} className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent/15 border border-accent/35 shadow-card">
         <span className="text-xs uppercase tracking-[0.2em] text-accent/90 font-semibold">Full Stack Engineer</span>
-        <span className="text-xs font-mono text-accent">.NET / Web / UI</span>
+        <span className="text-xs font-mono text-accent">.NET / UI / Databases / Web </span>
       </motion.div>
-      <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="mt-6 max-w-3xl">
+      <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }} className="mt-6 max-w-4xl">
         <h1 className="text-4xl sm:text-5xl font-semibold text-deluge leading-tight">
-          I craft thoughtful software and interfaces that feel intentional and polished.
+          I craft software with love and care, because that's what I love to do.
         </h1>
         <p className="mt-4 text-lg text-accent/80 dark:text-accent/85">
-          Blending backend reliability with front-end nuance. Currently focused on .NET desktop and web experiences.
+          Blending backend reliability with front-end nuance. Currently focused on .NET desktop applications using a wide variety of toolsets and technologies.
         </p>
       </motion.div>
       <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.18 }} className="mt-8 flex flex-wrap gap-3">
         <a
           href="#projects"
-          className="px-5 py-3 rounded-full bg-deluge text-white font-semibold shadow-card hover:scale-[1.01] transition-transform"
+          className="px-5 py-3 rounded-full bg-deluge text-white font-semibold shadow-card hover:scale-[1.07] transition-transform"
         >
           View projects
         </a>
         <a
           href="#contact"
-          className="px-5 py-3 rounded-full border border-deluge/50 text-deluge hover:bg-deluge/10 transition-colors"
+          className="px-5 py-3 rounded-full border border-deluge/50 text-deluge hover:bg-deluge/10 hover:scale-[1.07] transition-transform"
         >
           Contact
         </a>
@@ -181,7 +181,7 @@ function ProjectsGrid() {
             <h3 className="text-xl font-semibold text-deluge">{project.title}</h3>
             <a
               href={project.link}
-              className="text-deluge hover:text-ink dark:hover:text-white transition-colors inline-flex items-center gap-1 text-sm"
+              className="text-deluge hover:text-ink dark:hover:text-accent transition-colors inline-flex items-center gap-1 text-sm"
             >
               Code <ArrowUpRight size={18} />
             </a>
@@ -232,13 +232,17 @@ function SkillsGrid() {
 function About() {
   return (
     <motion.div {...fadeUp} className="glass rounded-2xl p-6 space-y-4">
-      <p className="text-accent/90 dark:text-accent-soft">
-        Based in Athens, I build full-stack products across desktop and web. I care about reliable APIs, smooth UI,
-        and shipping with polish.
+      <p className="text-accent dark:text-accent-soft">
+        Hey there! And thanks for visiting my portfolio page (:
       </p>
-      <p className="text-accent/90 dark:text-accent-soft/90">
-        Currently at DataBlue S.A. as a Junior Fullstack .NET Developer, expanding healthcare workflows and desktop
-        experiences.
+      <p className="text-accent dark:text-accent-soft">
+        I am young developer based in Athens Greece, who just recently graduated from the Department of Informatics and Computer Engineering at the University of West Attica. 
+        Being able to provide solutions to real world problems through code is a passion of mine and that's what always encourages me to learn more.
+      </p>
+      <p className="text-accent dark:text-accent-soft">
+        Working as a Mid - Fullstack .NET Developer at Databluse S.A. for almost 3 years now, I have gained valuable 
+        experience on how to build efficient and reliable software solutions, especially in the medical field.
+        Apart from the backend side of things, I adore designing and implementing memorable user interfaces that are smooth and offer the best user experience.
       </p>
     </motion.div>
   );
@@ -249,8 +253,8 @@ function Contact() {
     <div className="grid gap-6 md:grid-cols-2">
       <motion.div {...fadeUp} className="glass rounded-2xl p-6 space-y-4">
         <h3 className="text-xl font-semibold text-deluge">Let’s build something</h3>
-        <p className="text-accent/90 dark:text-accent-soft">
-          Reach out for collaborations, opportunities, or just to say hi. I’m open to new challenges.
+        <p className="text-accent dark:text-accent-soft">
+          Reach out for collaborations, opportunities, or whatever else might come to your mind. I am always open to new challenges and sharing information with others.
         </p>
         <a
           className="inline-flex items-center gap-2 text-deluge font-semibold hover:text-ink transition-colors"
@@ -259,10 +263,10 @@ function Contact() {
           <Mail size={18} />
           gouvousisnektarios@gmail.com
         </a>
-        <div className="flex justify-end">
+        <div className="inline-flex justify-end ml-5">
           <a
             href="/src/CV_Gkouvousis_en.pdf"
-            className="inline-flex px-5 py-3 rounded-full bg-deluge text-white font-semibold shadow-card hover:scale-[1.01] transition-transform"
+            className="inline-flex px-5 py-3 rounded-full bg-deluge text-white font-semibold shadow-card hover:scale-[1.07] transition-transform"
           >
             Download resume
           </a>
@@ -283,7 +287,7 @@ function SocialLink({ href, icon, label }) {
   return (
     <a
       href={href}
-      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 border border-accent/30 text-accent/80 hover:border-accent hover:text-accent transition-colors dark:bg-surface-1/80 dark:text-accent-soft"
+      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 border border-accent/30 text-accent/80 hover:border-accent hover:text-accent hover:scale-[1.03] transition-colors dark:bg-surface-1/80 dark:text-accent-soft"
       target="_blank"
       rel="noreferrer"
     >

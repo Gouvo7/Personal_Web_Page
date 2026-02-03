@@ -6,28 +6,20 @@
 
 :root {
   color-scheme: light;
-  --color-ink: 236 236 244;
-  --color-ink-soft: 246 244 252;
   --color-surface-1: 255 255 255;
   --color-surface-2: 245 240 255;
   --color-deluge: 116 93 166;
   --color-accent: 94 63 160;
-  --color-accent-soft: 198 175 233;
-  --color-prelude: 211 198 229;
-  --color-highlight: 255 255 255;
+  --color-accent-soft: 116 93 166;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --color-ink: 10 15 24;
-  --color-ink-soft: 15 22 35;
   --color-surface-1: 17 26 43;
   --color-surface-2: 21 32 50;
   --color-deluge: 125 102 180; /* richer purple */
   --color-accent: 190 162 240;
   --color-accent-soft: 133 106 186;
-  --color-prelude: 173 150 210;
-  --color-highlight: 255 255 255;
 }
 
 * {
