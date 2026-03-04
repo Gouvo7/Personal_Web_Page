@@ -88,7 +88,7 @@ function Nav({ theme, onToggle }) {
     <div className="sticky top-0 z-30 backdrop-blur-xl bg-surface-1/100 border-b border-deluge/100">
       <div className="section flex items-center justify-between py-2">
         <div className="flex items-center gap-4">
-          <Image src="/images/logo2.ico" alt="Logo" width={80} height={80} className="h-20 w-20 object-fit" />
+          <Image src={`${process.env.NODE_ENV === "production" ? "/Personal_Web_Page" : ""}/images/logo2.ico`} alt="Logo" width={80} height={80} className="h-20 w-20 object-fit" />
           <div>
             <p className="text-bg uppercase tracking-[0.26em] text-accent/60">Portfolio</p>
             <p className="text-accent font-semibold text-xl ">Nektarios Gkouvousis</p>
@@ -299,7 +299,7 @@ function Footer() {
   return (
     <div className="section pt-2 pb-4 text-sm text-accent/80 dark:text-accent-soft">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <p>Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Nektarios Gkouvousis. Crafted with care.</p>
+        <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Nektarios Gkouvousis. Crafted with care.</p>
         <a href="#top" className="hover:text-accent dark:hover:text-accent-soft">Back to top</a>
       </div>
     </div>
