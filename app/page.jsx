@@ -299,7 +299,7 @@ function Footer() {
   return (
     <div className="section pt-2 pb-4 text-sm text-accent/80 dark:text-accent-soft">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Nektarios Gkouvousis. Crafted with care.</p>
+        <p>© {new Date().getFullYear()} Nektarios Gkouvousis. Crafted with care.</p>
         <a href="#top" className="hover:text-accent dark:hover:text-accent-soft">Back to top</a>
       </div>
     </div>
