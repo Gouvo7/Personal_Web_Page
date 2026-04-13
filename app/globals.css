@@ -1,32 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* DESIGN TOKENS  Edit here to retheme the site */
+
 :root {
   color-scheme: light;
-  --color-surface-1: 255 255 255;
-  --color-surface-2: 245 240 255;
-  --color-deluge: 116 93 166;
-  --color-accent: 94 63 160;
+
+  /* Palette — consumed by Tailwind via tailwind.config.js */
+  --color-surface-1:   255 255 255;
+  --color-surface-2:   245 240 255;
+  --color-deluge:      116 93 166;
+  --color-accent:      94 63 160;
   --color-accent-soft: 116 93 166;
+
+  /* Semantic colors — used by typography & component classes below */
+  --c-heading:     rgb(116 93 166);
+  --c-text-soft:   rgb(94 63 160 / 0.78);
+  --c-text-muted:  rgb(94 63 160 / 0.52);
+  --c-text-pop:    rgba(81, 0, 255, 0.712);
+  --c-card-bg:     rgb(255 255 255 / 0.92);
+  --c-card-border: rgb(116 93 166 / 0.2);
+  --c-nav-text:    rgb(94 63 160);
+  --c-btn-border:  rgb(116 93 166 / 0.45);
+  --c-btn-text:    rgb(116 93 166);
+  --c-btn-hover:   rgb(116 93 166 / 0.12);
+
+  /* Font stacks — swap a family name here to change fonts site-wide */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --color-surface-1: 17 26 43;
-  --color-surface-2: 21 32 50;
-  --color-deluge: 125 102 180; /* richer purple */
-  --color-accent: 190 162 240;
+
+  /* Palette */
+  --color-surface-1:   17 26 43;
+  --color-surface-2:   21 32 50;
+  --color-deluge:      125 102 180;
+  --color-accent:      190 162 240;
   --color-accent-soft: 133 106 186;
+
+  /* Semantic colors (only what differs in dark mode) */
+  --c-heading:     rgb(145 118 205);
+  --c-text-soft:   rgb(190 162 240 / 0.78);
+  --c-text-muted:  rgb(133 106 186 / 0.65);
+  --c-text-pop:    rgb(255, 255, 255);
+  --c-card-bg:     rgb(17 26 43 / 0.94);
+  --c-card-border: rgb(125 102 180 / 0.32);
+  --c-nav-text:    rgb(210 190 255);
+  --c-btn-border:  rgb(145 118 205 / 0.7);
+  --c-btn-text:    rgb(175 148 240);
+  --c-btn-hover:   rgb(125 102 180 / 0.28);
 }
+
+/* BASE */
 
 * {
   @apply antialiased;
 }
 
 body {
+  font-family: var(--font-body);
   @apply bg-ink text-accent min-h-screen;
   background:
     radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.705), transparent 38%),
@@ -45,20 +83,165 @@ a {
   @apply transition-colors duration-200;
 }
 
+/* TYPOGRAPHY Assign these classes to set a text element's full style — font */
+
+/* Page hero headline (h1) */
+.t-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--c-heading);
+}
+
+/* Section titles (h2) */
+.t-section-title {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--c-heading);
+}
+
+/* Card / sub-section titles (h3) */
+.t-card-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--c-heading);
+}
+
+/* Standard body copy */
+.t-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--c-text-soft);
+}
+
+/* Larger body copy (hero subtitle, section intros) */
+.t-body-lg {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--c-text-soft);
+}
+
+/* Eyebrow / pill labels — small uppercase */
+.t-labelHeader {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-heading);
+}
+
+.t-label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-heading);
+}
+
+/* Name / prominent secondary label */
+.t-label2 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-nav-text);
+}
+
+/* Monospace — tech tags, code snippets */
+.t-monoPop {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--c-text-pop);
+}
+
+.t-monoPopSmall {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--c-text-pop);
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.t-meta {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--c-text-pop);
+}
+
+.t-metaFooter {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* COMPONENTS */
+
+/* Navigation link */
+.nav-link {
+  color: var(--c-nav-text);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Theme toggle button — vivid in dark mode */
+.btn-theme {
+  border: 1.5px solid var(--c-btn-border);
+  color: var(--c-btn-text);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.btn-theme:hover {
+  background-color: var(--c-btn-hover);
+}
+
 .glass {
-  @apply bg-surface-1/70 backdrop-blur-md border border-white/10 shadow-card;
-  border-color: rgba(116, 93, 166, 0.2);
-}
-
-[data-theme="dark"] .glass {
-  background-color: rgba(17, 26, 43, 0.92);
-  border-color: rgba(125, 102, 180, 0.35);
-}
-
-.pill {
-  @apply inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold tracking-tight uppercase;
+  background-color: var(--c-card-bg);
+  border-color: var(--c-card-border);
+  @apply backdrop-blur-md shadow-card;
 }
 
 .section {
   @apply max-w-6xl w-full mx-auto px-6;
+}
+
+/* UNDERLINE ANIMATION */
+
+.underline-slide {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+}
+
+.underline-slide:hover::after {
+  width: 100%;
 }
